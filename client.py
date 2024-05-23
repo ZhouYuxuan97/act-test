@@ -23,6 +23,8 @@ if __name__ == "__main__":
         print("Error: Missing arguments. Usage: python client_push.py <server_ip> <server_port> <message>")
         sys.exit(1)
     print(args.test)
+    print(999)
+    print("9"+"9"+"9")
     send_message(args.server_ip, args.server_port, args.message)
 
     # ip = sys.argv[1]
