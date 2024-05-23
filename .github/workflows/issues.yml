@@ -1,0 +1,16 @@
+name: Issues Event
+
+on:
+  issues:
+    types: [opened, edited, deleted, transferred, pinned, unpinned, closed, reopened, assigned, unassigned, labeled, unlabeled, locked, unlocked, milestoned, demilestoned]
+
+jobs:
+  run-client-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run client_issues script
+      run: python client.py ${{ secrets.SERVER_IP }} ${{ secrets.SERVER_PORT }} "issue action"
