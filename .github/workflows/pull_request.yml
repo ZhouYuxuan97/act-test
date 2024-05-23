@@ -1,0 +1,16 @@
+name: Pull Request Event
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  run-client-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run client_pull_request script
+      run: python client_push.py ${{ secrets.SERVER_IP }} ${{ secrets.SERVER_PORT }} "pull request action"
