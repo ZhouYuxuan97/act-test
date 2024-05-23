@@ -3,7 +3,7 @@ from datetime import datetime
 import argparse
 import sys
 
-def send_timestamp(server_ip, server_port, note):
+def send_message(server_ip, server_port, note):
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((server_ip, server_port))
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
