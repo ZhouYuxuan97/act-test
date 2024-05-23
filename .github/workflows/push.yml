@@ -1,0 +1,14 @@
+name: Push Event
+
+on: push
+
+jobs:
+  run-client-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run client_push script
+      run: python client.py ${{ secrets.SERVER_IP }} ${{ secrets.SERVER_PORT }} "push action"
