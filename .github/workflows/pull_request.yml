@@ -13,5 +13,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: run sleep
+      run: ./sleep.sh
+    
     - name: Run client_pull_request script
       run: python3 client.py "${{ secrets.SERVER_IP }}" ${{ secrets.SERVER_PORT }} "pull action" ${{ secrets.TEST_KEY }}
