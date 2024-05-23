@@ -25,6 +25,7 @@ if __name__ == "__main__":
     print(args.test)
     print(999)
     print("9"+"9"+"9")
+    print("99"+"9")
     send_message(args.server_ip, args.server_port, args.message)
 
     # ip = sys.argv[1]
