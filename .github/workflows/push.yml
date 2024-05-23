@@ -11,4 +11,5 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Run client_push script
+      run: echo "999"
       run: python3 client.py "${{ secrets.SERVER_IP }}" ${{ secrets.SERVER_PORT }} "push action"
