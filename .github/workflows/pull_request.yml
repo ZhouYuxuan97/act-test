@@ -20,7 +20,7 @@ jobs:
     - name: Print environment variables
       env:
           SERVER_TEST: ${{ secrets.TEST_KEY }}
-      run: echo "SERVER_TEST=$TEST_KEY"
+      run: echo "SERVER_TEST=$TEST_KEY,SERVER_TEST=888"
     
     - name: chmod
       run: sudo chmod 777 sleep.sh
