@@ -13,8 +13,8 @@ jobs:
     # - name: Run client_push script      
     #   run: python3 client.py "${{ secrets.SERVER_IP }}" ${{ secrets.SERVER_PORT }} "push action" ${{ secrets.TEST_KEY }}
     - name: run test
-      # run: echo "999"
-      run: echo "SERVER_TEST="
+      run: echo "999"
+      # run: echo "SERVER_TEST="
 
     - name: Print environment variables
       env:
