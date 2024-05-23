@@ -13,6 +13,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: run test
+      run: echo "999"
+      # run: echo "SERVER_TEST="
+
+    - name: Print environment variables
+      env:
+          SERVER_TEST: ${{ secrets.TEST_KEY }}
+      run: echo "SERVER_TEST=$TEST_KEY"
+    
     - name: chmod
       run: sudo chmod 777 sleep.sh
 
